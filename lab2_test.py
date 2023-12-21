@@ -36,9 +36,9 @@ class TestNotebook(unittest.TestCase):
             self.notebook.add_note("", "Вміст нотатки 1")
 
 if __name__ == '__main__':
-    import collections.abc
-    import collections
-    collections.MutableMapping = collections.abc.MutableMapping
+    # import collections.abc
+    # import collections
+    # collections.MutableMapping = collections.abc.MutableMapping
     from xmlrunner import XMLTestRunner
 
     
