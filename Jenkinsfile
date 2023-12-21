@@ -53,7 +53,7 @@ pipeline {
         stage('Docker Build'){
             steps {
                 sh 'pwd'
-                sh 'docker build -t lab3 /var/jenkins_home/workspace/new_pipe'
+                sh 'docker build -t lab3 /var/jenkins_home/workspace/exam'
                 // sh 'docker run lab3 test'
             }
         }
