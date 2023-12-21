@@ -21,12 +21,16 @@ pipeline {
                 }
             }
             steps {
-                sh 'apk add --update python3 py-pip'
-                sh 'pip install unittest2==1.1.0'
-                // sh 'pip install --upgrade pip wheel setuptools requests'
-                sh 'pip install xmlrunner'
-                sh 'python3 lab2_test.py'
-            }
+    script {
+        sh 'apk add --update python3 py3-pip' 
+        sh 'python3 -m venv /path/to/venv' 
+        sh 'source /path/to/venv/bin/activate' 
+        sh 'pip install unittest2==1.1.0'
+        sh 'pip install xmlrunner'
+        sh 'python3 lab2_test.py'
+    }
+}
+
             post {
                 always {
                     junit 'test-reports/*.xml'
