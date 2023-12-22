@@ -84,35 +84,5 @@ pipeline {
     }
 }
 
-
-
-
-        // stage('Docker Hub Login') {
-        //     steps {
-        //         script {
-        //             withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
-        //                 sh "docker login --username=${DOCKER_HUB_USERNAME} --password=${DOCKER_HUB_PASSWORD}"
-        //                 def imageTag = readFile 'docker-image-tag'
-        //                 // Надіслати Docker образ на Docker Hub
-        //                 sh "docker push ${imageTag}"
-        //             }
-        //         }
-        //     }
-        // }
-        
-        // stage('Build and Push Docker Image') {
-        //     steps {
-        //         script {
-        //             // Build Docker image
-        //             sh "docker build -t ${DOCKER_IMAGE} -f Dockerfile ."
-        //             // Push Docker image to Docker Hub
-        //             // withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-        //             //     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
-        //             // }
-        //             sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-        //             sh "docker push ${DOCKER_IMAGE}"
-        //         }
-        //     }
-        // }
     }
 }
