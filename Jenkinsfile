@@ -22,11 +22,11 @@ pipeline {
             }
             steps {
     script {
-        sh 'apk add --update python3 py3-pip' // Установка Python и pip
-        sh 'python3 -m venv /path/to/venv' // Создание виртуальной среды
-        sh '/path/to/venv/bin/pip install unittest2==1.1.0' // Установка unittest2 в виртуальной среде
-        sh '/path/to/venv/bin/pip install xmlrunner' // Установка xmlrunner в виртуальной среде
-        sh '/path/to/venv/bin/python3 lab2_test.py' // Запуск тестов в виртуальной среде
+        sh 'apk add --update python3 py3-pip' 
+        sh 'python3 -m venv /path/to/venv' 
+        sh '/path/to/venv/bin/pip install unittest2==1.1.0' 
+        sh '/path/to/venv/bin/pip install xmlrunner' 
+        sh '/path/to/venv/bin/python3 ex_test.py' 
     }
 }
 
